@@ -3,7 +3,7 @@ const app=express();
 app.use(express.json());
 let books = [
     {id: 1, title: "Oliver Twist", author: "Charles Dickens"},
-    {id: 2, title: "Legends of Shiva", author: "Amish Tripathi"}
+    {id: 2, title: "Legends of Shiva", author: "Amish Tripathi"},
     {id: 3, title: "Chacha Chaudhary:Raaka's chaos", author: "Pran"}
 ];
 app.get('/books', (req, res) => {
