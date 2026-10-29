@@ -30,7 +30,6 @@ app.post('/books', (req, res) => {
 app.put('/books/:id', (req, res) => {
     let id = Number(req.params.id);
     let book = books.find(book => book.id === id);
-
     if (book) {
         book.title = req.body.title;
         book.author = req.body.author;
