@@ -12,7 +12,6 @@ app.get('/books', (req, res) => {
 app.get('/books/:id', (req, res) => {
     let id = Number(req.params.id);
     let book = books.find(book => book.id === id);
-
     if (book) {
         res.json(book);
     } else {
@@ -25,7 +24,6 @@ app.post('/books', (req, res) => {
         title: req.body.title,
         author: req.body.author
     };
-
     books.push(newBook);
     res.status(201).json(newBook);
 });
